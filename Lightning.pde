@@ -1,13 +1,28 @@
-void setup()
-{
-  size(300,300);
+int xStart = 250;
+int yStart = 0;
+void setup(){
+  size(500,500);
+  background(0);
 }
-void draw()
-{
-
-}
-void mousePressed()
-{
-
+void draw(){
+  strokeWeight(10);
+  int red = (int)(Math.random()*250);
+  int green = (int)(Math.random()*250);
+  int blue = (int)(Math.random()*250);
+  stroke(red,green,blue);
+  int x = xStart+(int)(Math.random()*40)-20;
+  int y = yStart+(int)(Math.random()*30);
+  line(xStart,yStart,x,y);
+  if(y >= 500){
+     xStart=(int)(Math.random()*200+100);
+     yStart=0;
+     fill(0,0,0);
+     noStroke();
+     rect(0,0,500,500);
+  }
+  else{   
+     xStart = x;
+     yStart = y;
+  }
 }
 
