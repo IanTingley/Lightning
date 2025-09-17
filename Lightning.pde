@@ -15,10 +15,12 @@ void draw(){
   fill(red,green,blue);
   ellipse(x,y,40,40);
   if(y >= 500){
-     xStart=(int)(Math.random()*200+100);
-     yStart=0;
-     fill(0,0,0);
+     fill(200,100,0);
      noStroke();
+     ellipse(xStart,yStart,150,150);
+     xStart=(int)(Math.random()*250+125);
+     yStart=0;
+     fill(0,0,0,40);
      rect(0,0,500,500);
   }
   else{   
