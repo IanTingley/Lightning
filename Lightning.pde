@@ -12,7 +12,8 @@ void draw(){
   stroke(red,green,blue);
   int x = xStart+(int)(Math.random()*40)-20;
   int y = yStart+(int)(Math.random()*30);
-  line(xStart,yStart,x,y);
+  fill(red,green,blue);
+  ellipse(x,y,40,40);
   if(y >= 500){
      xStart=(int)(Math.random()*200+100);
      yStart=0;
